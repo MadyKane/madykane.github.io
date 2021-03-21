@@ -1,0 +1,80 @@
+$blue:#0088FF;
+$pink:#FF099C;
+main {
+    width: 100%;
+    height: calc(100vh + 75px);
+    background: url(/primz-hero-image.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    .container {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .overlay {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(0, 0, 0, 0.657);
+        }
+        h1 {
+            z-index: 1;
+            font-size: 60px;
+        }
+        p{
+            z-index: 1;
+            margin: 10px 0 30px;
+            font-size: 20px;
+        }
+        button {
+            z-index: 1;
+            transform: scale(1.4);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            background: linear-gradient(to left, $blue, $pink);
+            cursor: pointer;
+        }
+    }
+    .custom-shape-divider-bottom-1 {
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+        transform: rotate(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1 svg {
+        position: relative;
+        display: block;
+        width: calc(100% + 1.3px);
+        height: 75px;
+        transform: rotateY(180deg);
+    }
+    
+    .custom-shape-divider-bottom-1 .shape-fill {
+        fill: #FFFFFF;
+    }
+}
+@media screen and (max-width:680px) {
+    main {
+        .container {
+            h1 {
+                font-size: 40px;
+            }
+            p {
+                font-size:14px;
+                text-align: center;
+            }
+            button {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
